@@ -1,5 +1,6 @@
 #!/bin/sh
 
+sudo apt install tree
 
 if [ $# -ne 2 ]
 then
