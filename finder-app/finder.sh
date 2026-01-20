@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 if [ $# -ne 2 ]
 then
 	echo "You should pass 2 arguments."
