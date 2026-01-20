@@ -17,8 +17,7 @@ then
 	exit 1
 fi
 
-#X=$((($(tree "$filesdir" | wc -l)) - $(tree -d "$filesdir" | wc -l)))
-X=$(find "$filesdir" -type f | wc -l)
+X=$((($(tree "$filesdir" | wc -l)) - $(tree -d "$filesdir" | wc -l)))
 
 Y=$(grep -r "$searchstr" "$filesdir" | wc -l)
 
