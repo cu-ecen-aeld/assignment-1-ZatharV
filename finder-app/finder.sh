@@ -17,9 +17,10 @@ then
 	exit 1
 fi
 
-X=$((($(tree $filesdir | wc -l)) - $(tree -d $filesdir | wc -l)))
+#X=$((($(tree "$filesdir" | wc -l)) - $(tree -d "$filesdir" | wc -l)))
+X=$(find "$filesdir" -type f | wc -l)
 
-Y=$(grep -r $searchstr $filesdir | wc -l)
+Y=$(grep -r "$searchstr" "$filesdir" | wc -l)
 
 echo "The number of files are $X and the number of matching lines are $Y"
 
